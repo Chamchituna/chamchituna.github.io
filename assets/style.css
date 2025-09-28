@@ -56,58 +56,61 @@ h1,h2,h3{
 }
 .ornament-bars.flip{transform:scaleY(-1)}
 
-/* Wave dividers */
+/* Wave dividers layering */
 .section{position:relative; z-index:1}
 .wave-divider{position:relative; z-index:0}
 
+/* Wave dividers: five thin stroked waves, aligned to section edges */
 .wave-divider{
   display:block;
   height: var(--wave-h);
-  margin: calc(-1 * var(--wave-overlap)) 0;
-  background-position: center 100%;
+  margin: calc(-1 * var(--wave-overlap)) 0;          /* overlap into both sections */
+  background-position: center 100%;                  /* anchor to bottom edge */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background:
     /* Wave 1 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,140 C220,40 420,190 600,120 C780,50 980,180 1200,90' stroke='%23D2BB83' stroke-width='7' fill='none'/>\
+        <path d='M0,140 C220,40 420,190 600,120 C780,50 980,180 1200,90' stroke='%23D2BB83' stroke-width='7' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 2 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,155 C190,80 420,160 600,100 C780,40 1020,160 1200,70' stroke='%23C5A46D' stroke-width='8' fill='none'/>\
+        <path d='M0,155 C190,80 420,160 600,100 C780,40 1020,160 1200,70' stroke='%23C5A46D' stroke-width='8' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 3 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,120 C240,160 420,60 600,140 C780,200 980,80 1200,150' stroke='%23B89457' stroke-width='6' fill='none'/>\
+        <path d='M0,120 C240,160 420,60 600,140 C780,200 980,80 1200,150' stroke='%23B89457' stroke-width='6' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 4 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,105 C180,180 420,105 600,165 C780,205 1040,140 1200,185' stroke='%23A88C4A' stroke-width='7' fill='none'/>\
+        <path d='M0,105 C180,180 420,105 600,165 C780,205 1040,140 1200,185' stroke='%23A88C4A' stroke-width='7' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 5 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,185 C260,140 420,190 600,170 C780,150 960,170 1200,160' stroke='%23CD7F32' stroke-width='5' fill='none'/>\
+        <path d='M0,185 C260,140 420,190 600,170 C780,150 960,170 1200,160' stroke='%23CD7F32' stroke-width='5' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
+    /* parchment base */
     linear-gradient(#F7F1E1, #F7F1E1);
 }
 .wave-divider.flip{
   transform: scaleY(-1);
-  background-position: center 0%;
+  background-position: center 0%;                    /* anchor to top edge when flipped */
 }
 
-/* Fine-tuned joins */
+/* Fine-tuned joins (visual balance) */
 #intro + .wave-divider{
-  margin-top: calc(-1 * var(--wave-overlap) + 20px);
+  /* Increase space below Hero so top/bottom feel equal */
+  margin-top: calc(-1 * var(--wave-overlap) + 80px); /* was +20px */
 }
 #research + .wave-divider{
   margin-top: calc(-1 * var(--wave-overlap) + 24px);
