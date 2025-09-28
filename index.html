@@ -13,75 +13,74 @@
 </head>
 <body>
 
-  <!-- Hero with bar ornaments -->
-  <section id="intro" class="section hero hero-dark">
-    <div class="container">
+<!-- Hero with inverted bar heights and unique colors top/bottom -->
+<section id="intro" class="section hero hero-dark">
+  <div class="container">
 
-      <!-- TOP ornament (23 bars, gaps ~4.5× thickness, edges 4× center height) -->
-      <svg class="ornament-bars top" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
-        <!-- Bars grow downward from top; heights in px -->
-        <g>
-          <rect x="112" y="0" width="8" height="20.0" fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="156" y="0" width="8" height="18.6" fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="200" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
-          <rect x="244" y="0" width="8" height="15.9" fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="288" y="0" width="8" height="14.5" fill="#ccb27a" fill-opacity="0.9"/>
-          <rect x="332" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
-          <rect x="376" y="0" width="8" height="11.8" fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="420" y="0" width="8" height="10.5" fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="464" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
-          <rect x="508" y="0" width="8" height="7.7"  fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="552" y="0" width="8" height="6.4"  fill="#ccb27a" fill-opacity="0.9"/>
-          <rect x="596" y="0" width="8" height="5.0"  fill="#cfc7a1" fill-opacity="0.9"/>
-          <rect x="640" y="0" width="8" height="6.4"  fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="684" y="0" width="8" height="7.7"  fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="728" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
-          <rect x="772" y="0" width="8" height="10.5" fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="816" y="0" width="8" height="11.8" fill="#ccb27a" fill-opacity="0.9"/>
-          <rect x="860" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
-          <rect x="904" y="0" width="8" height="14.5" fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="948" y="0" width="8" height="15.9" fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="992" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
-          <rect x="1036" y="0" width="8" height="18.6" fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="1080" y="0" width="8" height="20.0" fill="#ccb27a" fill-opacity="0.9"/>
-        </g>
-      </svg>
+    <!-- TOP ornament — 23 bars, ends shortest, center tallest -->
+    <svg class="ornament-bars top" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
+      <g>
+        <rect x="112" y="0" width="8" height="5.0"  fill="#cfc7a1"/>
+        <rect x="156" y="0" width="8" height="6.4"  fill="#ccb27a"/>
+        <rect x="200" y="0" width="8" height="7.7"  fill="#a88c4a"/>
+        <rect x="244" y="0" width="8" height="9.1"  fill="#b89457"/>
+        <rect x="288" y="0" width="8" height="10.5" fill="#d2bb83"/>
+        <rect x="332" y="0" width="8" height="11.8" fill="#c5a46d"/>
+        <rect x="376" y="0" width="8" height="13.2" fill="#cfc7a1"/>
+        <rect x="420" y="0" width="8" height="14.5" fill="#ccb27a"/>
+        <rect x="464" y="0" width="8" height="15.9" fill="#a88c4a"/>
+        <rect x="508" y="0" width="8" height="17.3" fill="#b89457"/>
+        <rect x="552" y="0" width="8" height="18.6" fill="#d2bb83"/>
+        <rect x="596" y="0" width="8" height="20.0" fill="#c5a46d"/>
+        <rect x="640" y="0" width="8" height="18.6" fill="#cfc7a1"/>
+        <rect x="684" y="0" width="8" height="17.3" fill="#ccb27a"/>
+        <rect x="728" y="0" width="8" height="15.9" fill="#a88c4a"/>
+        <rect x="772" y="0" width="8" height="14.5" fill="#b89457"/>
+        <rect x="816" y="0" width="8" height="13.2" fill="#d2bb83"/>
+        <rect x="860" y="0" width="8" height="11.8" fill="#c5a46d"/>
+        <rect x="904" y="0" width="8" height="10.5" fill="#cfc7a1"/>
+        <rect x="948" y="0" width="8" height="9.1"  fill="#ccb27a"/>
+        <rect x="992" y="0" width="8" height="7.7"  fill="#a88c4a"/>
+        <rect x="1036" y="0" width="8" height="6.4"  fill="#b89457"/>
+        <rect x="1080" y="0" width="8" height="5.0"  fill="#d2bb83"/>
+      </g>
+    </svg>
 
-      <h1 class="display">Lorem Ipsum Dolor</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer vitae lectus in nibh euismod ullamcorper et at arcu.</p>
+    <h1 class="display">Lorem Ipsum Dolor</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer vitae lectus in nibh euismod ullamcorper et at arcu.</p>
 
-      <!-- BOTTOM ornament (same bars, flipped to grow upward) -->
-      <svg class="ornament-bars bottom flip" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
-        <g>
-          <rect x="112" y="0" width="8" height="20.0" fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="156" y="0" width="8" height="18.6" fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="200" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
-          <rect x="244" y="0" width="8" height="15.9" fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="288" y="0" width="8" height="14.5" fill="#ccb27a" fill-opacity="0.9"/>
-          <rect x="332" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
-          <rect x="376" y="0" width="8" height="11.8" fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="420" y="0" width="8" height="10.5" fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="464" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
-          <rect x="508" y="0" width="8" height="7.7"  fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="552" y="0" width="8" height="6.4"  fill="#ccb27a" fill-opacity="0.9"/>
-          <rect x="596" y="0" width="8" height="5.0"  fill="#cfc7a1" fill-opacity="0.9"/>
-          <rect x="640" y="0" width="8" height="6.4"  fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="684" y="0" width="8" height="7.7"  fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="728" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
-          <rect x="772" y="0" width="8" height="10.5" fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="816" y="0" width="8" height="11.8" fill="#ccb27a" fill-opacity="0.9"/>
-          <rect x="860" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
-          <rect x="904" y="0" width="8" height="14.5" fill="#c5a46d" fill-opacity="0.9"/>
-          <rect x="948" y="0" width="8" height="15.9" fill="#d2bb83" fill-opacity="0.9"/>
-          <rect x="992" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
-          <rect x="1036" y="0" width="8" height="18.6" fill="#a88c4a" fill-opacity="0.9"/>
-          <rect x="1080" y="0" width="8" height="20.0" fill="#ccb27a" fill-opacity="0.9"/>
-        </g>
-      </svg>
+    <!-- BOTTOM ornament — inverted heights, different randomized colors -->
+    <svg class="ornament-bars bottom flip" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
+      <g>
+        <rect x="112" y="0" width="8" height="5.0"  fill="#b89457"/>
+        <rect x="156" y="0" width="8" height="6.4"  fill="#d2bb83"/>
+        <rect x="200" y="0" width="8" height="7.7"  fill="#c5a46d"/>
+        <rect x="244" y="0" width="8" height="9.1"  fill="#cfc7a1"/>
+        <rect x="288" y="0" width="8" height="10.5" fill="#a88c4a"/>
+        <rect x="332" y="0" width="8" height="11.8" fill="#ccb27a"/>
+        <rect x="376" y="0" width="8" height="13.2" fill="#b89457"/>
+        <rect x="420" y="0" width="8" height="14.5" fill="#d2bb83"/>
+        <rect x="464" y="0" width="8" height="15.9" fill="#c5a46d"/>
+        <rect x="508" y="0" width="8" height="17.3" fill="#a88c4a"/>
+        <rect x="552" y="0" width="8" height="18.6" fill="#cfc7a1"/>
+        <rect x="596" y="0" width="8" height="20.0" fill="#ccb27a"/>
+        <rect x="640" y="0" width="8" height="18.6" fill="#b89457"/>
+        <rect x="684" y="0" width="8" height="17.3" fill="#c5a46d"/>
+        <rect x="728" y="0" width="8" height="15.9" fill="#d2bb83"/>
+        <rect x="772" y="0" width="8" height="14.5" fill="#cfc7a1"/>
+        <rect x="816" y="0" width="8" height="13.2" fill="#ccb27a"/>
+        <rect x="860" y="0" width="8" height="11.8" fill="#a88c4a"/>
+        <rect x="904" y="0" width="8" height="10.5" fill="#b89457"/>
+        <rect x="948" y="0" width="8" height="9.1"  fill="#d2bb83"/>
+        <rect x="992" y="0" width="8" height="7.7"  fill="#c5a46d"/>
+        <rect x="1036" y="0" width="8" height="6.4"  fill="#a88c4a"/>
+        <rect x="1080" y="0" width="8" height="5.0"  fill="#cfc7a1"/>
+      </g>
+    </svg>
 
-    </div>
-  </section>
-
+  </div>
+</section>
+  
   <div class="wave-divider"></div>
 
   <!-- Profile -->
