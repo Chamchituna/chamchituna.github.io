@@ -29,18 +29,18 @@ h1,h2,h3{
 .lead{font-size:1.125rem;}
 
 .container{max-width:var(--container); margin:0 auto; padding:0 20px}
-.section{padding:78px 0}
+.section{padding:90px 0} /* slightly larger to accommodate taller ornaments */
 .section.alt{background:linear-gradient(180deg, rgba(165,180,156,.10), rgba(197,164,109,.08))}
 .section-title{font-size:2rem; border-bottom:2px solid var(--gold); padding-bottom:.3rem}
 
 /* Hero dark */
-.hero{padding:100px 0 90px; text-align:center}
+.hero{padding:110px 0 100px; text-align:center}
 .hero-dark{background:var(--midnight)}
 .hero-dark .display{color:#F8F5EA}
 .hero-dark .lead{color:rgba(248,245,234,.88)}
 
-/* Ornaments */
-.ornament-bars{display:block; width:min(640px, 86%); height:16px; margin:18px auto; opacity:.95}
+/* Ornaments (inline SVGs) */
+.ornament-bars{display:block; width:min(700px, 90%); height:22px; margin:22px auto; opacity:.97}
 .ornament-bars.flip{transform:scaleY(-1)}
 
 /* Wave dividers */
