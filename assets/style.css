@@ -10,8 +10,9 @@
   --shadow:0 6px 24px rgba(28,42,58,.10);
   --container:980px;
 
-  /* NEW: divider height */
-  --wave-h:110px;
+  /* Waves */
+  --wave-h: 140px;                     /* divider height */
+  --wave-overlap: calc(var(--wave-h) * 0.75); /* how much the waves overlap sections */
 }
 
 *{box-sizing:border-box}
@@ -32,8 +33,10 @@ h1,h2,h3{
 .lead{font-size:1.125rem;}
 
 .container{max-width:var(--container); margin:0 auto; padding:0 20px}
-.section{padding:90px 0} /* slightly larger to accommodate taller ornaments */
-.section.alt{background:linear-gradient(180deg, rgba(165,180,156,.10), rgba(197,164,109,.08))}
+
+/* Sections: unicolor backgrounds (no gradients) */
+.section{padding:90px 0; background:var(--parchment);}
+.section.alt{background:var(--parchment);} /* keep alt flat too */
 .section-title{font-size:2rem; border-bottom:2px solid var(--gold); padding-bottom:.3rem}
 
 /* Hero dark */
@@ -42,66 +45,81 @@ h1,h2,h3{
 .hero-dark .display{color:#F8F5EA}
 .hero-dark .lead{color:rgba(248,245,234,.88)}
 
-/* Ornaments (inline SVGs for the 23 bars in HTML) */
+/* Hero ornaments (23 bars are defined in HTML) */
 .ornament-bars{display:block; width:min(700px, 90%); height:22px; margin:22px auto; opacity:.97}
 .ornament-bars.flip{transform:scaleY(-1)}
-/* Wave dividers: thinner strokes, aligned to section edges */
-:root{
-  --wave-h: 140px;                  /* actual wave height */
-  --wave-overlap: calc(var(--wave-h) * 0.70); /* how much the wave overlaps sections */
-}
 
+/* ============================
+   Wave dividers (5 stroked waves)
+   - Slimmer strokes
+   - More amplitude (wavier)
+   - Overlap to sit on section edge
+   ============================ */
 .wave-divider{
   display:block;
   height: var(--wave-h);
-  /* Pull the divider up into the previous section and down into the next one */
+  /* Overlap into sections so waves sit on the boundary */
   margin: calc(-1 * var(--wave-overlap)) 0;
-  /* Anchor the strokes to the bottom edge so they sit on the boundary */
   background-position: center 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  /* Layered stroked SVGs (no fills) so intersections are visible */
   background:
-    /* Wave 1 — light gold */
+    /* Wave 1 — light gold, medium */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
-        <path d='M0,120 C200,60 420,160 600,100 C780,40 1000,140 1200,80' stroke='%23D2BB83' stroke-width='6' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
+        <path d='M0,140 C220,40 420,190 600,120 C780,50 980,180 1200,90' stroke='%23D2BB83' stroke-width='7' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 2 — classic gold (slightly thicker) */
+    /* Wave 2 — classic gold, slightly thicker */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
-        <path d='M0,130 C180,75 420,135 600,90 C780,45 1020,135 1200,70' stroke='%23C5A46D' stroke-width='7' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
+        <path d='M0,155 C190,80 420,160 600,100 C780,40 1020,160 1200,70' stroke='%23C5A46D' stroke-width='8' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 3 — darker gold / amber (thinner) */
+    /* Wave 3 — darker gold / amber, thinner */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
-        <path d='M0,110 C220,135 420,80 600,120 C780,160 980,85 1200,125' stroke='%23B89457' stroke-width='5' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
+        <path d='M0,120 C240,160 420,60 600,140 C780,200 980,80 1200,150' stroke='%23B89457' stroke-width='6' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 4 — olive-gold */
+    /* Wave 4 — olive-gold, medium thin */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
-        <path d='M0,95 C160,150 420,105 600,145 C780,175 1040,130 1200,155' stroke='%23A88C4A' stroke-width='6' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
+        <path d='M0,105 C180,180 420,105 600,165 C780,205 1040,140 1200,185' stroke='%23A88C4A' stroke-width='7' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 5 — bronze accent (thinnest) */
+    /* Wave 5 — bronze accent, thinnest */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
-        <path d='M0,150 C240,120 420,160 600,140 C780,120 960,140 1200,130' stroke='%23CD7F32' stroke-width='4' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
+        <path d='M0,185 C260,140 420,190 600,170 C780,150 960,170 1200,160' stroke='%23CD7F32' stroke-width='5' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* parchment base (lets waves blend with background) */
+    /* parchment base */
     linear-gradient(#F7F1E1, #F7F1E1);
 }
 
-/* Flip for the inverted divider — anchor to top edge */
+/* Flip version (between sections where you used .flip) */
 .wave-divider.flip{
   transform: scaleY(-1);
   background-position: center 0%;
 }
+
+/* Extra breathing room specifically below the Publications section */
+#publications + .wave-divider,
+#publications + .wave-divider.flip{
+  /* reduce the negative overlap (i.e., add space above the divider) */
+  margin-top: calc(-1 * var(--wave-overlap) + 28px);
+}
+
 /* Cards */
-.card{background:#fffaf0e6; border:1px solid rgba(197,164,109,.45); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
+.card{
+  background:#fffaf0e6;
+  border:1px solid rgba(197,164,109,.45);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow)
+}
 .hover-elevate{transition:all .2s ease}
 .hover-elevate:hover{transform:translateY(-2px); box-shadow:0 10px 32px rgba(28,42,58,.18)}
 .text-link{color:var(--burgundy); border-bottom:1px dotted rgba(122,46,46,.55)}
@@ -141,4 +159,6 @@ h1,h2,h3{
 .site-footer a:hover{opacity:.85}
 
 /* Responsive */
-@media(max-width:860px){.two-col{grid-template-columns:1fr}}
+@media(max-width:860px){
+  .two-col{grid-template-columns:1fr}
+}
