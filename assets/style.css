@@ -110,7 +110,7 @@ h1,h2,h3{
 /* Fine-tuned joins (visual balance) */
 #intro + .wave-divider{
   /* Increase space below Hero so top/bottom feel equal */
-  margin-top: calc(-1 * var(--wave-overlap) + 80px); /* was +20px */
+  margin-top: calc(-1 * var(--wave-overlap) + 100px); /* was +20px */
 }
 #research + .wave-divider{
   margin-top: calc(-1 * var(--wave-overlap) + 24px);
