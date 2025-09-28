@@ -46,40 +46,40 @@ h1,h2,h3{
 .ornament-bars{display:block; width:min(700px, 90%); height:22px; margin:22px auto; opacity:.97}
 .ornament-bars.flip{transform:scaleY(-1)}
 
-/* Wave dividers: 5 distinct stroked waves, slimmer and varied thickness */
-:root { --wave-h: 130px; }
+/* Wave dividers: thinner strokes, varied per wave */
+:root { --wave-h: 140px; }
 
 .wave-divider{
   height: var(--wave-h);
   background:
     /* Wave 1 — light gold, medium */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
-        <path d='M0,80 C200,20 420,120 600,65 C780,10 1000,100 1200,55' stroke='%23D2BB83' stroke-width='12' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+        <path d='M0,120 C200,60 420,160 600,100 C780,40 1000,140 1200,80' stroke='%23D2BB83' stroke-width='6' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 2 — classic gold, a bit thicker */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
-        <path d='M0,90 C180,45 420,85 600,50 C780,15 1020,85 1200,40' stroke='%23C5A46D' stroke-width='13' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+        <path d='M0,130 C180,75 420,135 600,90 C780,45 1020,135 1200,70' stroke='%23C5A46D' stroke-width='7' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 3 — darker gold / amber, thinner */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
-        <path d='M0,70 C220,95 420,30 600,60 C780,90 980,35 1200,65' stroke='%23B89457' stroke-width='11' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+        <path d='M0,110 C220,135 420,80 600,120 C780,160 980,85 1200,125' stroke='%23B89457' stroke-width='5' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 4 — olive-gold, medium thin */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
-        <path d='M0,55 C160,100 420,55 600,85 C780,115 1040,80 1200,95' stroke='%23A88C4A' stroke-width='12' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+        <path d='M0,95 C160,150 420,105 600,145 C780,175 1040,130 1200,155' stroke='%23A88C4A' stroke-width='6' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* Wave 5 — bronze accent, thinnest */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
-        <path d='M0,105 C240,75 420,110 600,95 C780,80 960,95 1200,85' stroke='%23CD7F32' stroke-width='10' fill='none' stroke-linecap='round'/>\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
+        <path d='M0,150 C240,120 420,160 600,140 C780,120 960,140 1200,130' stroke='%23CD7F32' stroke-width='4' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
     /* parchment base */
