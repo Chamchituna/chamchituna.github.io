@@ -1,11 +1,185 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Woojun Lee — Homepage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Woojun Lee — Portfolio</title>
+  <meta name="description" content="One-page personal site in a Belle Époque palette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Elegant serif + crisp sans for a Belle Époque feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <h1>Hello, world 👋</h1>
-  <p>This is my homepage hosted with GitHub Pages.</p>
+  <!-- Sticky top navigation -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#intro">WL</a>
+      <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#profile">Profile</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Professional Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Introduction / Hero -->
+  <section id="intro" class="section hero">
+    <div class="container">
+      <h1 class="display">Lorem Ipsum Dolor</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer vitae lectus in nibh euismod ullamcorper et at arcu.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#profile">Learn more</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="ornament ornament-top"></div>
+    <div class="ornament ornament-bottom"></div>
+  </section>
+
+  <!-- Profile -->
+  <section id="profile" class="section">
+    <div class="container two-col">
+      <div>
+        <h2 class="section-title">Profile</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia sem vitae pulvinar facilisis. Praesent gravida, magna id lacinia posuere, dolor purus dictum augue, vel rhoncus magna nunc a augue.</p>
+        <p>Curabitur non elit vel lorem varius consequat. Sed ut sem non justo sodales sollicitudin. Phasellus vitae ex sed ligula gravida placerat.</p>
+        <ul class="tags">
+          <li>Python</li><li>C++</li><li>Simulation</li><li>Optics</li><li>Robotics</li>
+        </ul>
+      </div>
+      <aside class="card">
+        <h3>At a glance</h3>
+        <ul class="kv">
+          <li><span>Location</span><span>Lorem, Ipsum</span></li>
+          <li><span>Focus</span><span>Dolor · Sit · Amet</span></li>
+          <li><span>Email</span><span>lorem@ipsum.edu</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Lorem Project A</h3>
+          <p>Integer pretium, leo sed cursus auctor, sapien lorem hendrerit elit, in dignissim arcu lorem quis nisl. Pellentesque habitant morbi tristique.</p>
+          <a href="#" class="text-link">View details →</a>
+        </article>
+        <article class="card">
+          <h3>Ipsum Study B</h3>
+          <p>Donec ullamcorper, velit eget posuere cursus, nisl ipsum iaculis neque, a fermentum neque dolor at magna. Vivamus et interdum nisl.</p>
+          <a href="#" class="text-link">View details →</a>
+        </article>
+        <article class="card">
+          <h3>Dolor Experiment C</h3>
+          <p>Morbi a libero sed sapien gravida blandit. Aenean id nibh ut dui aliquam posuere. Suspendisse potenti. Quisque maximus arcu id viverra.</p>
+          <a href="#" class="text-link">View details →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <ol class="pubs">
+        <li>
+          <strong>Lorem Ipsum</strong>. A. Author, B. Author. <em>Journal of Elegant Things</em>, 2025. 
+          <a href="#" class="text-link">PDF</a> · <a href="#" class="text-link">Code</a>
+        </li>
+        <li>
+          <strong>Dolor Sit Amet</strong>. C. Scholar, D. Researcher. <em>Transactions on Art Nouveau</em>, 2024.
+          <a href="#" class="text-link">PDF</a>
+        </li>
+        <li>
+          <strong>Consectetur Adipiscing</strong>. E. Ipsum. <em>Proceedings of Belle Époque Systems</em>, 2023.
+          <a href="#" class="text-link">PDF</a> · <a href="#" class="text-link">BibTeX</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Professional Experience -->
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <h3>Lorem Company — Role Title</h3>
+            <span class="muted">2025 — Present · City, Country</span>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Integer non dui id magna pharetra interdum.</li>
+              <li>Fusce maximus arcu nec lorem malesuada, vitae feugiat arcu hendrerit.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <h3>Ipsum Lab — Research Assistant</h3>
+            <span class="muted">2024 — 2025 · City, Country</span>
+            <ul>
+              <li>Donec a nibh dignissim, luctus nibh sit amet, viverra justo.</li>
+              <li>Morbi sagittis, sapien in tempus semper, risus ligula varius arcu.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <h3>Dolor Studio — Intern</h3>
+            <span class="muted">2023 · City, Country</span>
+            <ul>
+              <li>Sed a ex in metus condimentum tristique.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat lectus at sapien posuere dignissim.</p>
+      <div class="contact-cards">
+        <a class="card link-card" href="mailto:lorem@ipsum.edu">Email</a>
+        <a class="card link-card" href="#">GitHub</a>
+        <a class="card link-card" href="#">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="y"></span> Lorem Ipsum • Crafted with a Belle Époque palette • <a href="#intro">Back to top</a></small>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth-scrolling (native CSS covers most, this helps old browsers)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
