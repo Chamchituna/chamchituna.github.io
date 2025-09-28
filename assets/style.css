@@ -45,49 +45,60 @@ h1,h2,h3{
 /* Ornaments (inline SVGs for the 23 bars in HTML) */
 .ornament-bars{display:block; width:min(700px, 90%); height:22px; margin:22px auto; opacity:.97}
 .ornament-bars.flip{transform:scaleY(-1)}
-
-/* Wave dividers: thinner strokes, varied per wave */
-:root { --wave-h: 140px; }
+/* Wave dividers: thinner strokes, aligned to section edges */
+:root{
+  --wave-h: 140px;                  /* actual wave height */
+  --wave-overlap: calc(var(--wave-h) * 0.70); /* how much the wave overlaps sections */
+}
 
 .wave-divider{
+  display:block;
   height: var(--wave-h);
+  /* Pull the divider up into the previous section and down into the next one */
+  margin: calc(-1 * var(--wave-overlap)) 0;
+  /* Anchor the strokes to the bottom edge so they sit on the boundary */
+  background-position: center 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background:
-    /* Wave 1 — light gold, medium */
+    /* Wave 1 — light gold */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
         <path d='M0,120 C200,60 420,160 600,100 C780,40 1000,140 1200,80' stroke='%23D2BB83' stroke-width='6' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 2 — classic gold, a bit thicker */
+    /* Wave 2 — classic gold (slightly thicker) */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
         <path d='M0,130 C180,75 420,135 600,90 C780,45 1020,135 1200,70' stroke='%23C5A46D' stroke-width='7' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 3 — darker gold / amber, thinner */
+    /* Wave 3 — darker gold / amber (thinner) */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
         <path d='M0,110 C220,135 420,80 600,120 C780,160 980,85 1200,125' stroke='%23B89457' stroke-width='5' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 4 — olive-gold, medium thin */
+    /* Wave 4 — olive-gold */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
         <path d='M0,95 C160,150 420,105 600,145 C780,175 1040,130 1200,155' stroke='%23A88C4A' stroke-width='6' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 5 — bronze accent, thinnest */
+    /* Wave 5 — bronze accent (thinnest) */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'>\
         <path d='M0,150 C240,120 420,160 600,140 C780,120 960,140 1200,130' stroke='%23CD7F32' stroke-width='4' fill='none' stroke-linecap='round'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* parchment base */
+    /* parchment base (lets waves blend with background) */
     linear-gradient(#F7F1E1, #F7F1E1);
 }
 
+/* Flip for the inverted divider — anchor to top edge */
 .wave-divider.flip{
   transform: scaleY(-1);
+  background-position: center 0%;
 }
 /* Cards */
 .card{background:#fffaf0e6; border:1px solid rgba(197,164,109,.45); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
