@@ -52,16 +52,50 @@ h1,h2,h3{
 .hero-dark .display{ color:#F8F5EA; }
 .hero-dark .lead{ color:rgba(248,245,234,.88); }
 
-/* Dotted ornaments */
-.ornament-dot{
-  height:10px;
-  width:min(560px, 86%);
-  margin:20px auto;
-  background: radial-gradient(currentColor 1.1px, transparent 1.2px) center/12px 10px repeat-x;
-  color: rgba(197,164,109,0.65);
+/* Thin rectangle ornaments: taller at edges, shorter in the middle */
+.ornament-bars{
+  height:16px;
+  width:min(640px, 86%);
+  margin:18px auto;
+  background:
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'>\
+        <defs>\
+          <!-- Mask: high at edges, low at center (smooth) -->\
+          <mask id='m'>\
+            <rect width='1200' height='24' fill='black'/>\
+            <path d='M0,0 L0,20 Q600,6 1200,20 L1200,0 Z' fill='white'/>\
+          </mask>\
+          <!-- Four overlaid bar patterns to create slight color variation -->\
+          <pattern id='p1' width='8' height='24' patternUnits='userSpaceOnUse'>\
+            <rect x='0' y='0' width='5' height='24' fill='%23c5a46d'/>\
+          </pattern>\
+          <pattern id='p2' width='13' height='24' patternUnits='userSpaceOnUse'>\
+            <rect x='2' y='0' width='4' height='24' fill='%23b89457' fill-opacity='0.72'/>\
+          </pattern>\
+          <pattern id='p3' width='21' height='24' patternUnits='userSpaceOnUse'>\
+            <rect x='6' y='0' width='3' height='24' fill='%23d2bb83' fill-opacity='0.60'/>\
+          </pattern>\
+          <pattern id='p4' width='34' height='24' patternUnits='userSpaceOnUse'>\
+            <rect x='12' y='0' width='2' height='24' fill='%23a88c4a' fill-opacity='0.55'/>\
+          </pattern>\
+        </defs>\
+        <g mask='url(%23m)'>\
+          <rect width='1200' height='24' fill='url(%23p1)'/>\
+          <rect width='1200' height='24' fill='url(%23p2)'/>\
+          <rect width='1200' height='24' fill='url(%23p3)'/>\
+          <rect width='1200' height='24' fill='url(%23p4)'/>\
+        </g>\
+      </svg>") center/cover no-repeat;
+  opacity: 0.95;
 }
-.ornament-dot.top{ margin-top: 8px; }
-.ornament-dot.bottom{ margin-bottom: 8px; }
+
+.ornament-bars.flip{
+  transform: scaleY(-1);
+}
+
+.ornament-bars.top{ margin-top: 10px; }
+.ornament-bars.bottom{ margin-bottom: 10px; }
 
 /* Wave dividers */
 .wave-divider{
