@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" />
 </head>
+  
 <body>
 <!-- Hero with 23 centered bars (ends 65px tall, middle 20px) -->
 <section id="intro" class="section hero hero-dark">
-  <div class="container">
 
     <!-- TOP ornament -->
     <svg class="ornament-bars top" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
@@ -165,14 +165,15 @@
       </div>
     </div>
   </section>
-
+  
+  <div class="wave-divider flip"></div>
+  
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <small>© <span id="y"></span> Lorem Ipsum • <a href="#intro">Back to top</a></small>
     </div>
   </footer>
-
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
