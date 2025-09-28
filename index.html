@@ -7,19 +7,73 @@
   <meta name="description" content="One-page personal site in a refined Belle Époque-inspired palette.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Refined pairing: decorative serif for headings, crisp sans for body -->
+  <!-- Typography: decorative serif for headings, crisp sans for body -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-  <!-- Introduction / Hero -->
+  <!-- Hero Section -->
   <section id="intro" class="section hero hero-dark">
     <div class="container">
-      <div class="ornament-bars top"></div>
+      <!-- Top ornament -->
+      <svg class="ornament-bars top" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <mask id="m-top">
+            <rect width="1200" height="24" fill="black"/>
+            <path d="M0,0 L0,20 Q600,6 1200,20 L1200,0 Z" fill="white"/>
+          </mask>
+          <pattern id="p1-top" width="8" height="24" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="5" height="24" fill="#c5a46d"/>
+          </pattern>
+          <pattern id="p2-top" width="13" height="24" patternUnits="userSpaceOnUse">
+            <rect x="2" y="0" width="4" height="24" fill="#b89457" fill-opacity="0.72"/>
+          </pattern>
+          <pattern id="p3-top" width="21" height="24" patternUnits="userSpaceOnUse">
+            <rect x="6" y="0" width="3" height="24" fill="#d2bb83" fill-opacity="0.60"/>
+          </pattern>
+          <pattern id="p4-top" width="34" height="24" patternUnits="userSpaceOnUse">
+            <rect x="12" y="0" width="2" height="24" fill="#a88c4a" fill-opacity="0.55"/>
+          </pattern>
+        </defs>
+        <g mask="url(#m-top)">
+          <rect width="1200" height="24" fill="url(#p1-top)"/>
+          <rect width="1200" height="24" fill="url(#p2-top)"/>
+          <rect width="1200" height="24" fill="url(#p3-top)"/>
+          <rect width="1200" height="24" fill="url(#p4-top)"/>
+        </g>
+      </svg>
+
       <h1 class="display">Lorem Ipsum Dolor</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer vitae lectus in nibh euismod ullamcorper et at arcu.</p>
-      <div class="ornament-bars bottom flip"></div>
+
+      <!-- Bottom ornament -->
+      <svg class="ornament-bars bottom flip" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <mask id="m-bot">
+            <rect width="1200" height="24" fill="black"/>
+            <path d="M0,0 L0,20 Q600,6 1200,20 L1200,0 Z" fill="white"/>
+          </mask>
+          <pattern id="p1-bot" width="8" height="24" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="5" height="24" fill="#c5a46d"/>
+          </pattern>
+          <pattern id="p2-bot" width="13" height="24" patternUnits="userSpaceOnUse">
+            <rect x="2" y="0" width="4" height="24" fill="#b89457" fill-opacity="0.72"/>
+          </pattern>
+          <pattern id="p3-bot" width="21" height="24" patternUnits="userSpaceOnUse">
+            <rect x="6" y="0" width="3" height="24" fill="#d2bb83" fill-opacity="0.60"/>
+          </pattern>
+          <pattern id="p4-bot" width="34" height="24" patternUnits="userSpaceOnUse">
+            <rect x="12" y="0" width="2" height="24" fill="#a88c4a" fill-opacity="0.55"/>
+          </pattern>
+        </defs>
+        <g mask="url(#m-bot)">
+          <rect width="1200" height="24" fill="url(#p1-bot)"/>
+          <rect width="1200" height="24" fill="url(#p2-bot)"/>
+          <rect width="1200" height="24" fill="url(#p3-bot)"/>
+          <rect width="1200" height="24" fill="url(#p4-bot)"/>
+        </g>
+      </svg>
     </div>
   </section>
 
@@ -30,8 +84,8 @@
     <div class="container two-col">
       <div>
         <h2 class="section-title">Profile</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia sem vitae pulvinar facilisis. Praesent gravida, magna id lacinia posuere, dolor purus dictum augue, vel rhoncus magna nunc a augue.</p>
-        <p>Curabitur non elit vel lorem varius consequat. Sed ut sem non justo sodales sollicitudin. Phasellus vitae ex sed ligula gravida placerat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia sem vitae pulvinar facilisis.</p>
+        <p>Curabitur non elit vel lorem varius consequat. Sed ut sem non justo sodales sollicitudin.</p>
         <ul class="tags">
           <li>Python</li><li>C++</li><li>Simulation</li><li>Optics</li><li>Robotics</li>
         </ul>
@@ -54,21 +108,9 @@
     <div class="container">
       <h2 class="section-title">Research</h2>
       <div class="grid">
-        <article class="card hover-elevate">
-          <h3>Lorem Project A</h3>
-          <p>Integer pretium, leo sed cursus auctor, sapien lorem hendrerit elit, in dignissim arcu lorem quis nisl. Pellentesque habitant morbi tristique.</p>
-          <a href="#" class="text-link">View details →</a>
-        </article>
-        <article class="card hover-elevate">
-          <h3>Ipsum Study B</h3>
-          <p>Donec ullamcorper, velit eget posuere cursus, nisl ipsum iaculis neque, a fermentum neque dolor at magna. Vivamus et interdum nisl.</p>
-          <a href="#" class="text-link">View details →</a>
-        </article>
-        <article class="card hover-elevate">
-          <h3>Dolor Experiment C</h3>
-          <p>Morbi a libero sed sapien gravida blandit. Aenean id nibh ut dui aliquam posuere. Suspendisse potenti. Quisque maximus arcu id viverra.</p>
-          <a href="#" class="text-link">View details →</a>
-        </article>
+        <article class="card hover-elevate"><h3>Lorem Project A</h3><p>Integer pretium sapien lorem hendrerit elit.</p></article>
+        <article class="card hover-elevate"><h3>Ipsum Study B</h3><p>Donec ullamcorper velit eget posuere cursus.</p></article>
+        <article class="card hover-elevate"><h3>Dolor Experiment C</h3><p>Morbi a libero sed sapien gravida blandit.</p></article>
       </div>
     </div>
   </section>
@@ -80,62 +122,23 @@
     <div class="container">
       <h2 class="section-title">Publications</h2>
       <ol class="pubs">
-        <li>
-          <strong>Lorem Ipsum</strong>. A. Author, B. Author. <em>Journal of Elegant Things</em>, 2025. 
-          <a href="#" class="text-link">PDF</a> · <a href="#" class="text-link">Code</a>
-        </li>
-        <li>
-          <strong>Dolor Sit Amet</strong>. C. Scholar, D. Researcher. <em>Transactions on Art Nouveau</em>, 2024.
-          <a href="#" class="text-link">PDF</a>
-        </li>
-        <li>
-          <strong>Consectetur Adipiscing</strong>. E. Ipsum. <em>Proceedings of Belle Époque Systems</em>, 2023.
-          <a href="#" class="text-link">PDF</a> · <a href="#" class="text-link">BibTeX</a>
-        </li>
+        <li><strong>Lorem Ipsum</strong>. A. Author. <em>Journal of Elegant Things</em>, 2025.</li>
+        <li><strong>Dolor Sit Amet</strong>. B. Scholar. <em>Transactions on Art Nouveau</em>, 2024.</li>
+        <li><strong>Consectetur Adipiscing</strong>. C. Ipsum. <em>Proceedings of Belle Époque Systems</em>, 2023.</li>
       </ol>
     </div>
   </section>
 
   <div class="wave-divider flip"></div>
 
-  <!-- Professional Experience -->
+  <!-- Experience -->
   <section id="experience" class="section alt">
     <div class="container">
       <h2 class="section-title">Professional Experience</h2>
       <div class="timeline">
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <h3>Lorem Company — Role Title</h3>
-            <span class="muted">2025 — Present · City, Country</span>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Integer non dui id magna pharetra interdum.</li>
-              <li>Fusce maximus arcu nec lorem malesuada, vitae feugiat arcu hendrerit.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <h3>Ipsum Lab — Research Assistant</h3>
-            <span class="muted">2024 — 2025 · City, Country</span>
-            <ul>
-              <li>Donec a nibh dignissim, luctus nibh sit amet, viverra justo.</li>
-              <li>Morbi sagittis, sapien in tempus semper, risus ligula varius arcu.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <h3>Dolor Studio — Intern</h3>
-            <span class="muted">2023 · City, Country</span>
-            <ul>
-              <li>Sed a ex in metus condimentum tristique.</li>
-            </ul>
-          </div>
-        </div>
+        <div class="t-item"><div class="t-dot"></div><div class="t-content"><h3>Lorem Company — Role</h3><span class="muted">2025 — Present</span></div></div>
+        <div class="t-item"><div class="t-dot"></div><div class="t-content"><h3>Ipsum Lab — RA</h3><span class="muted">2024 — 2025</span></div></div>
+        <div class="t-item"><div class="t-dot"></div><div class="t-content"><h3>Dolor Studio — Intern</h3><span class="muted">2023</span></div></div>
       </div>
     </div>
   </section>
@@ -146,7 +149,6 @@
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat lectus at sapien posuere dignissim.</p>
       <div class="contact-cards">
         <a class="card link-card hover-elevate" href="mailto:lorem@ipsum.edu">Email</a>
         <a class="card link-card hover-elevate" href="#">GitHub</a>
