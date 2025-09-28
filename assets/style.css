@@ -46,28 +46,49 @@ h1,h2,h3{
 .ornament-bars{display:block; width:min(700px, 90%); height:22px; margin:22px auto; opacity:.97}
 .ornament-bars.flip{transform:scaleY(-1)}
 
-/* Wave dividers: 5 layered waves with varied gold → bronze hues */
+/* Wave dividers: 5 distinct stroked waves (no fills), visible intersections */
+:root { --wave-h: 130px; } /* taller so all waves are visible */
+
 .wave-divider{
   height: var(--wave-h);
   background:
+    /* Wave 1 — light gold */
     url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'>\
-        <!-- Base parchment to blend into page background -->\
-        <path d='M0,0 C150,100 350,0 600,60 C850,120 1050,20 1200,80 L1200,140 L0,140 Z' fill='%23F7F1E1'/>\
-        <!-- Wave 1: light gold -->\
-        <path d='M0,10 C160,70 360,20 600,70 C840,120 1040,50 1200,90 L1200,140 L0,140 Z' fill='%23D2BB83' fill-opacity='0.45'/>\
-        <!-- Wave 2: classic gold -->\
-        <path d='M0,25 C150,85 360,10 600,60 C840,110 1040,30 1200,80 L1200,140 L0,140 Z' fill='%23C5A46D' fill-opacity='0.50'/>\
-        <!-- Wave 3: darker gold / amber -->\
-        <path d='M0,40 C170,95 370,15 600,55 C830,95 1040,35 1200,75 L1200,140 L0,140 Z' fill='%23B89457' fill-opacity='0.50'/>\
-        <!-- Wave 4: olive-gold -->\
-        <path d='M0,55 C150,95 360,30 600,50 C840,80 1040,45 1200,70 L1200,140 L0,140 Z' fill='%23A88C4A' fill-opacity='0.50'/>\
-        <!-- Wave 5: bronze (topmost accent) -->\
-        <path d='M0,70 C140,90 360,45 600,48 C840,51 1060,55 1200,65 L1200,140 L0,140 Z' fill='%23CD7F32' fill-opacity='0.35'/>\
-      </svg>") center/100% 100% no-repeat;
-}
-.wave-divider.flip{transform:scaleY(-1)}
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
+        <path d='M0,80 C200,20 420,120 600,65 C780,10 1000,100 1200,55' stroke='%23D2BB83' stroke-width='24' fill='none' stroke-linecap='round'/>\
+      </svg>") center/100% 100% no-repeat,
 
+    /* Wave 2 — classic gold */
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
+        <path d='M0,90 C180,45 420,85 600,50 C780,15 1020,85 1200,40' stroke='%23C5A46D' stroke-width='22' fill='none' stroke-linecap='round'/>\
+      </svg>") center/100% 100% no-repeat,
+
+    /* Wave 3 — darker gold / amber */
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
+        <path d='M0,70 C220,95 420,30 600,60 C780,90 980,35 1200,65' stroke='%23B89457' stroke-width='20' fill='none' stroke-linecap='round'/>\
+      </svg>") center/100% 100% no-repeat,
+
+    /* Wave 4 — olive-gold */
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
+        <path d='M0,55 C160,100 420,55 600,85 C780,115 1040,80 1200,95' stroke='%23A88C4A' stroke-width='18' fill='none' stroke-linecap='round'/>\
+      </svg>") center/100% 100% no-repeat,
+
+    /* Wave 5 — bronze accent */
+    url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 130' preserveAspectRatio='none'>\
+        <path d='M0,105 C240,75 420,110 600,95 C780,80 960,95 1200,85' stroke='%23CD7F32' stroke-width='16' fill='none' stroke-linecap='round'/>\
+      </svg>") center/100% 100% no-repeat,
+
+    /* parchment base behind strokes so it blends with page */
+    linear-gradient(#F7F1E1, #F7F1E1);
+}
+
+.wave-divider.flip{
+  transform: scaleY(-1);
+}
 /* Cards */
 .card{background:#fffaf0e6; border:1px solid rgba(197,164,109,.45); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
 .hover-elevate{transition:all .2s ease}
