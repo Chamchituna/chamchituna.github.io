@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lorem Ipsum — Portfolio</title>
+  <meta name="description" content="One-page personal site in a refined Belle Époque-inspired palette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Minimal wave styling to guarantee visibility */
+    .wave-svg{display:block;width:100%;height:auto}
+    .wave-wrap{position:relative;background:transparent}
+    .wave-wrap.flip .wave-svg{transform:scaleY(-1)}
+    .site-footer{position:relative;z-index:2}
+  </style>
+</head>
+<body>
+
+  <section id="intro" class="section hero hero-dark">
+    <div class="container">
+      <h1 class="display">Lorem Ipsum Dolor</h1>
+      <p class="lead">If you can read this, CSS is loading fine. The waves below are inline SVG so they always render.</p>
+    </div>
+  </section>
+
+  <!-- 5-line waves (inline SVG so it cannot be stripped by GitHub Pages) -->
+  <div class="wave-wrap">
+    <svg class="wave-svg" viewBox="0 0 1200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0,30 C150,5 300,55 450,30 S750,5 900,30 S1050,55 1200,30" stroke="#c5a46d" stroke-width="3"/>
+        <path d="M0,55 C150,30 300,80 450,55 S750,30 900,55 S1050,80 1200,55" stroke="#b89457" stroke-width="3"/>
+        <path d="M0,80 C150,55 300,105 450,80 S750,55 900,80 S1050,105 1200,80" stroke="#d2bb83" stroke-width="3"/>
+        <path d="M0,105 C150,80 300,130 450,105 S750,80 900,105 S1050,130 1200,105" stroke="#a88c4a" stroke-width="3"/>
+        <path d="M0,130 C150,105 300,155 450,130 S750,105 900,130 S1050,155 1200,130" stroke="#cfc7a1" stroke-width="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="profile" class="section">
+    <div class="container two-col">
+      <div>
+        <h2 class="section-title">Profile</h2>
+        <p>Curabitur non elit vel lorem varius consequat.</p>
+      </div>
+      <aside class="card profile-card">
+        <img src="assets/profile.jpg" alt="Portrait" class="portrait" />
+        <ul class="kv">
+          <li><span>Location</span><span>Lorem, Ipsum</span></li>
+          <li><span>Focus</span><span>Dolor · Sit · Amet</span></li>
+          <li><span>Email</span><span>lorem@ipsum.edu</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <div class="wave-wrap flip">
+    <svg class="wave-svg" viewBox="0 0 1200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0,30 C150,5 300,55 450,30 S750,5 900,30 S1050,55 1200,30" stroke="#c5a46d" stroke-width="3"/>
+        <path d="M0,55 C150,30 300,80 450,55 S750,30 900,55 S1050,80 1200,55" stroke="#b89457" stroke-width="3"/>
+        <path d="M0,80 C150,55 300,105 450,80 S750,55 900,80 S1050,105 1200,80" stroke="#d2bb83" stroke-width="3"/>
+        <path d="M0,105 C150,80 300,130 450,105 S750,80 900,105 S1050,130 1200,105" stroke="#a88c4a" stroke-width="3"/>
+        <path d="M0,130 C150,105 300,155 450,130 S750,105 900,130 S1050,155 1200,130" stroke="#cfc7a1" stroke-width="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="research" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <div class="grid">
+        <article class="card hover-elevate"><h3>Project A</h3><p>Integer pretium sapien.</p></article>
+        <article class="card hover-elevate"><h3>Study B</h3><p>Donec ullamcorper velit.</p></article>
+        <article class="card hover-elevate"><h3>Experiment C</h3><p>Morbi a libero.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap">
+    <svg class="wave-svg" viewBox="0 0 1200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0,30 C150,5 300,55 450,30 S750,5 900,30 S1050,55 1200,30" stroke="#c5a46d" stroke-width="3"/>
+        <path d="M0,55 C150,30 300,80 450,55 S750,30 900,55 S1050,80 1200,55" stroke="#b89457" stroke-width="3"/>
+        <path d="M0,80 C150,55 300,105 450,80 S750,55 900,80 S1050,105 1200,80" stroke="#d2bb83" stroke-width="3"/>
+        <path d="M0,105 C150,80 300,130 450,105 S750,80 900,105 S1050,130 1200,105" stroke="#a88c4a" stroke-width="3"/>
+        <path d="M0,130 C150,105 300,155 450,130 S750,105 900,130 S1050,155 1200,130" stroke="#cfc7a1" stroke-width="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-cards">
+        <a class="card link-card hover-elevate" href="mailto:lorem@ipsum.edu">Email</a>
+        <a class="card link-card hover-elevate" href="#">GitHub</a>
+        <a class="card link-card hover-elevate" href="#">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="y"></span> Lorem Ipsum • <a href="#intro">Back to top</a></small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
