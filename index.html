@@ -13,67 +13,72 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Hero with bar ornaments -->
   <section id="intro" class="section hero hero-dark">
     <div class="container">
-      <!-- Top ornament -->
+
+      <!-- TOP ornament (23 bars, gaps ~4.5× thickness, edges 4× center height) -->
       <svg class="ornament-bars top" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <mask id="m-top">
-            <rect width="1200" height="24" fill="black"/>
-            <path d="M0,0 L0,20 Q600,6 1200,20 L1200,0 Z" fill="white"/>
-          </mask>
-          <pattern id="p1-top" width="8" height="24" patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="5" height="24" fill="#c5a46d"/>
-          </pattern>
-          <pattern id="p2-top" width="13" height="24" patternUnits="userSpaceOnUse">
-            <rect x="2" y="0" width="4" height="24" fill="#b89457" fill-opacity="0.72"/>
-          </pattern>
-          <pattern id="p3-top" width="21" height="24" patternUnits="userSpaceOnUse">
-            <rect x="6" y="0" width="3" height="24" fill="#d2bb83" fill-opacity="0.60"/>
-          </pattern>
-          <pattern id="p4-top" width="34" height="24" patternUnits="userSpaceOnUse">
-            <rect x="12" y="0" width="2" height="24" fill="#a88c4a" fill-opacity="0.55"/>
-          </pattern>
-        </defs>
-        <g mask="url(#m-top)">
-          <rect width="1200" height="24" fill="url(#p1-top)"/>
-          <rect width="1200" height="24" fill="url(#p2-top)"/>
-          <rect width="1200" height="24" fill="url(#p3-top)"/>
-          <rect width="1200" height="24" fill="url(#p4-top)"/>
+        <!-- Bars grow downward from top; heights in px -->
+        <g>
+          <rect x="112" y="0" width="8" height="20.0" fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="156" y="0" width="8" height="18.6" fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="200" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
+          <rect x="244" y="0" width="8" height="15.9" fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="288" y="0" width="8" height="14.5" fill="#ccb27a" fill-opacity="0.9"/>
+          <rect x="332" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
+          <rect x="376" y="0" width="8" height="11.8" fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="420" y="0" width="8" height="10.5" fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="464" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
+          <rect x="508" y="0" width="8" height="7.7"  fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="552" y="0" width="8" height="6.4"  fill="#ccb27a" fill-opacity="0.9"/>
+          <rect x="596" y="0" width="8" height="5.0"  fill="#cfc7a1" fill-opacity="0.9"/>
+          <rect x="640" y="0" width="8" height="6.4"  fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="684" y="0" width="8" height="7.7"  fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="728" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
+          <rect x="772" y="0" width="8" height="10.5" fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="816" y="0" width="8" height="11.8" fill="#ccb27a" fill-opacity="0.9"/>
+          <rect x="860" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
+          <rect x="904" y="0" width="8" height="14.5" fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="948" y="0" width="8" height="15.9" fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="992" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
+          <rect x="1036" y="0" width="8" height="18.6" fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="1080" y="0" width="8" height="20.0" fill="#ccb27a" fill-opacity="0.9"/>
         </g>
       </svg>
 
       <h1 class="display">Lorem Ipsum Dolor</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer vitae lectus in nibh euismod ullamcorper et at arcu.</p>
 
-      <!-- Bottom ornament -->
+      <!-- BOTTOM ornament (same bars, flipped to grow upward) -->
       <svg class="ornament-bars bottom flip" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <mask id="m-bot">
-            <rect width="1200" height="24" fill="black"/>
-            <path d="M0,0 L0,20 Q600,6 1200,20 L1200,0 Z" fill="white"/>
-          </mask>
-          <pattern id="p1-bot" width="8" height="24" patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="5" height="24" fill="#c5a46d"/>
-          </pattern>
-          <pattern id="p2-bot" width="13" height="24" patternUnits="userSpaceOnUse">
-            <rect x="2" y="0" width="4" height="24" fill="#b89457" fill-opacity="0.72"/>
-          </pattern>
-          <pattern id="p3-bot" width="21" height="24" patternUnits="userSpaceOnUse">
-            <rect x="6" y="0" width="3" height="24" fill="#d2bb83" fill-opacity="0.60"/>
-          </pattern>
-          <pattern id="p4-bot" width="34" height="24" patternUnits="userSpaceOnUse">
-            <rect x="12" y="0" width="2" height="24" fill="#a88c4a" fill-opacity="0.55"/>
-          </pattern>
-        </defs>
-        <g mask="url(#m-bot)">
-          <rect width="1200" height="24" fill="url(#p1-bot)"/>
-          <rect width="1200" height="24" fill="url(#p2-bot)"/>
-          <rect width="1200" height="24" fill="url(#p3-bot)"/>
-          <rect width="1200" height="24" fill="url(#p4-bot)"/>
+        <g>
+          <rect x="112" y="0" width="8" height="20.0" fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="156" y="0" width="8" height="18.6" fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="200" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
+          <rect x="244" y="0" width="8" height="15.9" fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="288" y="0" width="8" height="14.5" fill="#ccb27a" fill-opacity="0.9"/>
+          <rect x="332" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
+          <rect x="376" y="0" width="8" height="11.8" fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="420" y="0" width="8" height="10.5" fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="464" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
+          <rect x="508" y="0" width="8" height="7.7"  fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="552" y="0" width="8" height="6.4"  fill="#ccb27a" fill-opacity="0.9"/>
+          <rect x="596" y="0" width="8" height="5.0"  fill="#cfc7a1" fill-opacity="0.9"/>
+          <rect x="640" y="0" width="8" height="6.4"  fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="684" y="0" width="8" height="7.7"  fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="728" y="0" width="8" height="9.1"  fill="#b89457" fill-opacity="0.9"/>
+          <rect x="772" y="0" width="8" height="10.5" fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="816" y="0" width="8" height="11.8" fill="#ccb27a" fill-opacity="0.9"/>
+          <rect x="860" y="0" width="8" height="13.2" fill="#cfc7a1" fill-opacity="0.9"/>
+          <rect x="904" y="0" width="8" height="14.5" fill="#c5a46d" fill-opacity="0.9"/>
+          <rect x="948" y="0" width="8" height="15.9" fill="#d2bb83" fill-opacity="0.9"/>
+          <rect x="992" y="0" width="8" height="17.3" fill="#b89457" fill-opacity="0.9"/>
+          <rect x="1036" y="0" width="8" height="18.6" fill="#a88c4a" fill-opacity="0.9"/>
+          <rect x="1080" y="0" width="8" height="20.0" fill="#ccb27a" fill-opacity="0.9"/>
         </g>
       </svg>
+
     </div>
   </section>
 
