@@ -10,9 +10,8 @@
   --shadow:0 6px 24px rgba(28,42,58,.10);
   --container:980px;
 
-  /* Waves */
-  --wave-h: 140px;                     /* divider height */
-  --wave-overlap: calc(var(--wave-h) * 0.75); /* how much the waves overlap sections */
+  --wave-h: 140px;
+  --wave-overlap: calc(var(--wave-h) * 0.75);
 }
 
 *{box-sizing:border-box}
@@ -34,82 +33,87 @@ h1,h2,h3{
 
 .container{max-width:var(--container); margin:0 auto; padding:0 20px}
 
-/* Sections: unicolor backgrounds (no gradients) */
+/* Sections: flat unicolor */
 .section{padding:90px 0; background:var(--parchment);}
-.section.alt{background:var(--parchment);} /* keep alt flat too */
 .section-title{font-size:2rem; border-bottom:2px solid var(--gold); padding-bottom:.3rem}
 
-/* Hero dark */
-.hero{padding:110px 0 100px; text-align:center}
+/* Hero */
+.hero{
+  padding:120px 0 120px; /* equal top & bottom */
+  text-align:center;
+}
 .hero-dark{background:var(--midnight)}
 .hero-dark .display{color:#F8F5EA}
 .hero-dark .lead{color:rgba(248,245,234,.88)}
 
-/* Hero ornaments (23 bars are defined in HTML) */
-.ornament-bars{display:block; width:min(700px, 90%); height:22px; margin:22px auto; opacity:.97}
+/* Hero ornaments */
+.ornament-bars{
+  display:block;
+  width:min(700px, 90%);
+  height:22px;
+  margin:22px auto;
+  opacity:.97
+}
 .ornament-bars.flip{transform:scaleY(-1)}
 
-/* ============================
-   Wave dividers (5 stroked waves)
-   - Slimmer strokes
-   - More amplitude (wavier)
-   - Overlap to sit on section edge
-   ============================ */
+/* Wave dividers */
+.section{position:relative; z-index:1}
+.wave-divider{position:relative; z-index:0}
+
 .wave-divider{
   display:block;
   height: var(--wave-h);
-  /* Overlap into sections so waves sit on the boundary */
   margin: calc(-1 * var(--wave-overlap)) 0;
   background-position: center 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  /* Layered stroked SVGs (no fills) so intersections are visible */
   background:
-    /* Wave 1 — light gold, medium */
+    /* Wave 1 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,140 C220,40 420,190 600,120 C780,50 980,180 1200,90' stroke='%23D2BB83' stroke-width='7' fill='none' stroke-linecap='round'/>\
+        <path d='M0,140 C220,40 420,190 600,120 C780,50 980,180 1200,90' stroke='%23D2BB83' stroke-width='7' fill='none'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 2 — classic gold, slightly thicker */
+    /* Wave 2 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,155 C190,80 420,160 600,100 C780,40 1020,160 1200,70' stroke='%23C5A46D' stroke-width='8' fill='none' stroke-linecap='round'/>\
+        <path d='M0,155 C190,80 420,160 600,100 C780,40 1020,160 1200,70' stroke='%23C5A46D' stroke-width='8' fill='none'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 3 — darker gold / amber, thinner */
+    /* Wave 3 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,120 C240,160 420,60 600,140 C780,200 980,80 1200,150' stroke='%23B89457' stroke-width='6' fill='none' stroke-linecap='round'/>\
+        <path d='M0,120 C240,160 420,60 600,140 C780,200 980,80 1200,150' stroke='%23B89457' stroke-width='6' fill='none'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 4 — olive-gold, medium thin */
+    /* Wave 4 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,105 C180,180 420,105 600,165 C780,205 1040,140 1200,185' stroke='%23A88C4A' stroke-width='7' fill='none' stroke-linecap='round'/>\
+        <path d='M0,105 C180,180 420,105 600,165 C780,205 1040,140 1200,185' stroke='%23A88C4A' stroke-width='7' fill='none'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* Wave 5 — bronze accent, thinnest */
+    /* Wave 5 */
     url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'>\
-        <path d='M0,185 C260,140 420,190 600,170 C780,150 960,170 1200,160' stroke='%23CD7F32' stroke-width='5' fill='none' stroke-linecap='round'/>\
+        <path d='M0,185 C260,140 420,190 600,170 C780,150 960,170 1200,160' stroke='%23CD7F32' stroke-width='5' fill='none'/>\
       </svg>") center/100% 100% no-repeat,
 
-    /* parchment base */
     linear-gradient(#F7F1E1, #F7F1E1);
 }
-
-/* Flip version (between sections where you used .flip) */
 .wave-divider.flip{
   transform: scaleY(-1);
   background-position: center 0%;
 }
 
-/* Extra breathing room specifically below the Publications section */
-#publications + .wave-divider,
-#publications + .wave-divider.flip{
-  /* reduce the negative overlap (i.e., add space above the divider) */
-  margin-top: calc(-1 * var(--wave-overlap) + 28px);
+/* Fine-tuned joins */
+#intro + .wave-divider{
+  margin-top: calc(-1 * var(--wave-overlap) + 20px);
+}
+#research + .wave-divider{
+  margin-top: calc(-1 * var(--wave-overlap) + 24px);
+}
+#contact + .wave-divider{
+  margin-bottom: calc(-1 * var(--wave-overlap) + 10px);
 }
 
 /* Cards */
@@ -121,20 +125,57 @@ h1,h2,h3{
   box-shadow:var(--shadow)
 }
 .hover-elevate{transition:all .2s ease}
-.hover-elevate:hover{transform:translateY(-2px); box-shadow:0 10px 32px rgba(28,42,58,.18)}
-.text-link{color:var(--burgundy); border-bottom:1px dotted rgba(122,46,46,.55)}
+.hover-elevate:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(28,42,58,.18)
+}
+.text-link{
+  color:var(--burgundy);
+  border-bottom:1px dotted rgba(122,46,46,.55)
+}
 
 /* Profile */
 .profile-card{display:flex; flex-direction:column; align-items:center}
-.portrait{width:168px; height:168px; object-fit:cover; border-radius:50%; border:3px solid var(--gold)}
+.portrait{
+  width:168px;
+  height:168px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid var(--gold)
+}
 
 /* Layout */
-.two-col{display:grid; grid-template-columns:1.4fr .9fr; gap:32px}
-.grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px}
-.tags{list-style:none; display:flex; flex-wrap:wrap; gap:8px; padding:0; margin-top:16px}
-.tags li{border:1px solid rgba(197,164,109,.6); border-radius:999px; padding:6px 10px; background:#fffdf7cc}
+.two-col{
+  display:grid;
+  grid-template-columns:1.4fr .9fr;
+  gap:32px
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:20px
+}
+.tags{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:0;
+  margin-top:16px
+}
+.tags li{
+  border:1px solid rgba(197,164,109,.6);
+  border-radius:999px;
+  padding:6px 10px;
+  background:#fffdf7cc
+}
 .kv{list-style:none; width:100%; padding:0; margin:0}
-.kv li{display:flex; justify-content:space-between; border-bottom:1px dashed rgba(197,164,109,.35); padding:6px 0}
+.kv li{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px dashed rgba(197,164,109,.35);
+  padding:6px 0
+}
 .kv li:last-child{border-bottom:none}
 
 /* Publications */
@@ -143,19 +184,54 @@ h1,h2,h3{
 
 /* Timeline */
 .timeline{position:relative; margin-left:12px; padding-left:22px}
-.timeline:before{content:""; position:absolute; left:6px; top:0; bottom:0; width:2px; background:linear-gradient(180deg, var(--gold), rgba(197,164,109,.25))}
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(180deg, var(--gold), rgba(197,164,109,.25))
+}
 .t-item{position:relative; margin-bottom:20px}
-.t-dot{position:absolute; left:-2px; top:.4rem; width:14px; height:14px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 3px #f7f1e1a0}
+.t-dot{
+  position:absolute;
+  left:-2px;
+  top:.4rem;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 3px #f7f1e1a0
+}
 .t-content{padding-left:10px}
 .muted{color:#5b5757; font-size:.95rem}
 
 /* Contact */
-.contact-cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:16px; margin-top:12px}
-.link-card{text-align:center; font-weight:600; color:var(--midnight); text-decoration:none}
+.contact-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:16px;
+  margin-top:12px
+}
+.link-card{
+  text-align:center;
+  font-weight:600;
+  color:var(--midnight);
+  text-decoration:none
+}
 
 /* Footer */
-.site-footer{border-top:1px solid rgba(197,164,109,.45); padding:16px 0; text-align:center}
-.site-footer a{color:var(--midnight); text-decoration:none; border-bottom:1px dotted rgba(28,42,58,.6)}
+.site-footer{
+  border-top:1px solid rgba(197,164,109,.45);
+  padding:16px 0;
+  text-align:center
+}
+.site-footer a{
+  color:var(--midnight);
+  text-decoration:none;
+  border-bottom:1px dotted rgba(28,42,58,.6)
+}
 .site-footer a:hover{opacity:.85}
 
 /* Responsive */
