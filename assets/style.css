@@ -1,9 +1,3 @@
-/* ===========================
-   Refined Belle Époque Palette
-   ===========================
-   Subtle + modern: parchment, ink, midnight, burgundy, gold, sage.
-   No flashy ornaments; calm texture and modest accents only.
-*/
 :root{
   --parchment:#F7F1E1;
   --ink:#2F2A2A;
@@ -22,12 +16,7 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   color:var(--ink);
-  /* Very subtle paper texture using layered gradients (no image file needed) */
-  background:
-    linear-gradient(0deg, rgba(255,255,255,.5), rgba(255,255,255,.5)),
-    radial-gradient(1200px 600px at 50% -10%, rgba(197,164,109,.08), transparent 60%),
-    radial-gradient(900px 500px at 0% 110%, rgba(28,42,58,.05), transparent 50%),
-    var(--parchment);
+  background:var(--parchment);
   font:16px/1.65 "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   text-rendering:optimizeLegibility;
 }
@@ -38,14 +27,12 @@ h1,h2,h3{
   line-height:1.2;
   margin:0 0 .5rem;
 }
-.display{font-size:clamp(2.2rem, 3.5vw + 1rem, 3.6rem); letter-spacing:.3px}
-.lead{font-size:1.125rem; color:#3a3636}
+.display{font-size:clamp(2.2rem, 3.5vw + 1rem, 3.6rem);}
+.lead{font-size:1.125rem;}
 
 .container{max-width:var(--container); margin:0 auto; padding:0 20px}
 .section{padding:78px 0; position:relative}
 .section.alt{background:linear-gradient(180deg, rgba(165,180,156,.10), rgba(197,164,109,.08))}
-
-/* Section titles with modest gold underline */
 .section-title{
   font-size:2rem;
   display:inline-block;
@@ -53,39 +40,30 @@ h1,h2,h3{
   border-bottom:2px solid var(--gold);
 }
 
-/* HERO: faint Paris line-art behind text (non-distracting) */
+/* HERO Dark Variant */
 .hero{
-  padding:120px 0 96px;
+  padding:110px 0 96px;
   text-align:center;
   position:relative;
-  overflow:hidden;
 }
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  /* Inline SVG (Eiffel + arches hint), ultra low-contrast */
-  background-image:
-    radial-gradient(800px 380px at 90% 10%, rgba(122,46,46,.10), transparent 60%),
-    url("data:image/svg+xml;utf8, \
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600' fill='none'> \
-        <g stroke='%23C5A46D' stroke-opacity='0.18' stroke-width='2'> \
-          <path d='M900,520 L840,520 L870,420 L885,420 L900,520 Z'/> \
-          <path d='M870,420 L870,320 M855,360 L885,360'/> \
-          <path d='M150,520 Q200,420 250,520'/> \
-          <path d='M250,520 Q300,420 350,520'/> \
-          <path d='M350,520 Q400,420 450,520'/> \
-          <path d='M100,520 L1100,520' stroke-width='1' stroke-opacity='0.12'/> \
-        </g> \
-      </svg>");
-  background-size: cover, 1200px 600px;
-  background-position: center, center bottom;
-  background-repeat: no-repeat;
-  pointer-events:none;
-  filter: blur(.3px);
+.hero-dark{
+  background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.12)), var(--midnight);
 }
-.hero .display{letter-spacing:.6px}
+.hero-dark .display{ color:#F8F5EA; }
+.hero-dark .lead{ color:rgba(248,245,234,.88); }
 
-/* Wave dividers (Option 4) */
+/* Dotted ornaments */
+.ornament-dot{
+  height:10px;
+  width:min(560px, 86%);
+  margin:20px auto;
+  background: radial-gradient(currentColor 1.1px, transparent 1.2px) center/12px 10px repeat-x;
+  color: rgba(197,164,109,0.65);
+}
+.ornament-dot.top{ margin-top: 8px; }
+.ornament-dot.bottom{ margin-bottom: 8px; }
+
+/* Wave dividers */
 .wave-divider{
   height:42px;
   background: url("data:image/svg+xml;utf8, \
@@ -94,29 +72,22 @@ h1,h2,h3{
       <path d='M0,0 C150,95 350,5 600,60 C850,115 1050,25 1200,80' fill='none' stroke='%23C5A46D' stroke-opacity='0.35' stroke-width='2'/> \
     </svg>") center/cover no-repeat;
 }
-.wave-divider.flip{
-  transform: scaleY(-1);
-}
+.wave-divider.flip{ transform: scaleY(-1); }
 
-/* Cards / links with gentle hover (Interactive Option 2) */
+/* Cards / Hover */
 .card{
-  background:#fffaf0e6; /* parchment tint */
+  background:#fffaf0e6;
   border:1px solid rgba(197,164,109,.45);
   border-radius:var(--radius);
   padding:18px 18px 16px;
   box-shadow:var(--shadow);
 }
-.hover-elevate{
-  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
-}
+.hover-elevate{ transition: box-shadow .2s ease, transform .2s ease; }
 .hover-elevate:hover{
   transform: translateY(-2px);
-  border-color: rgba(197,164,109,.75);
   box-shadow:0 10px 32px rgba(28,42,58,.18);
 }
-.text-link{
-  color:var(--burgundy); text-decoration:none; border-bottom:1px dotted rgba(122,46,46,.55);
-}
+.text-link{ color:var(--burgundy); text-decoration:none; border-bottom:1px dotted rgba(122,46,46,.55); }
 .text-link:hover{color:#581f1f}
 
 /* Profile portrait */
@@ -139,11 +110,11 @@ h1,h2,h3{
 .kv li{display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px dashed rgba(197,164,109,.35)}
 .kv li:last-child{border-bottom:none}
 
-/* Publications list */
+/* Publications */
 .pubs{margin:0; padding-left:18px}
 .pubs li{margin:10px 0}
 
-/* Timeline with understated medallions (Interactive Option 3) */
+/* Timeline */
 .timeline{position:relative; margin-left:12px; padding-left:22px}
 .timeline:before{
   content:""; position:absolute; left:6px; top:0; bottom:0; width:2px;
