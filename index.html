@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Nav -->
+  <!-- Top Nav -->
   <div class="nav">
     <div class="nav-inner">
       <div class="brand">Your&nbsp;Name</div>
@@ -32,22 +32,27 @@
       <span class="kicker">Lorem · Ipsum · Dolor</span>
       <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
       <div class="lead">
-        <p>Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus.</p>
+        <p class="dropcap">Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
       </div>
     </div>
   </header>
 
+  <!-- Ornament Separator -->
+  <div class="orn-sep" aria-hidden="true">
+    <svg class="orn"><use href="#orn-fleur"></use></svg>
+  </div>
+
   <!-- Profile -->
   <section id="profile">
     <div class="wrap">
-      <h2>Profile <span class="rule" aria-hidden="true"></span></h2>
-      <div class="card profile" role="region" aria-labelledby="profile">
+      <h2 class="gilded">Profile <span class="rule" aria-hidden="true"></span></h2>
+      <div class="card profile cornered" role="region" aria-labelledby="profile">
         <div class="portrait" aria-hidden="true">
           <img src="portrait.jpg" alt="Portrait placeholder">
         </div>
         <div>
           <p><strong>Lorem Ipsum</strong> — Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-          <p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          <p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
           <div class="tags" aria-label="Key areas">
             <span class="tag">Lorem</span><span class="tag">Ipsum</span><span class="tag">Dolor</span>
             <span class="tag">Sit</span><span class="tag">Amet</span><span class="tag">Consectetur</span>
@@ -57,10 +62,15 @@
     </div>
   </section>
 
+  <!-- Ornament Separator -->
+  <div class="orn-sep" aria-hidden="true">
+    <svg class="orn"><use href="#orn-fleur"></use></svg>
+  </div>
+
   <!-- Research -->
   <section id="research">
     <div class="wrap">
-      <h2>Research <span class="rule" aria-hidden="true"></span></h2>
+      <h2 class="gilded silver">Research <span class="rule" aria-hidden="true"></span></h2>
       <div class="list">
         <article class="item">
           <h3>Etiam Justo Tristique</h3>
@@ -81,20 +91,25 @@
     </div>
   </section>
 
+  <!-- Ornament Separator -->
+  <div class="orn-sep" aria-hidden="true">
+    <svg class="orn"><use href="#orn-fleur"></use></svg>
+  </div>
+
   <!-- Publications -->
   <section id="pubs">
     <div class="wrap">
-      <h2>Publications <span class="rule" aria-hidden="true"></span></h2>
-      <div class="card">
+      <h2 class="gilded">Publications <span class="rule" aria-hidden="true"></span></h2>
+      <div class="card cornered">
         <div class="list">
           <article class="item">
             <h3>Lorem Ipsum Dolor</h3>
-            <div class="meta">Author — Venue, 2025 · <a href="#">PDF</a> · <a href="#">Code</a></div>
+            <div class="meta">Author — Venue, 2025 · <a class="met" href="#">PDF</a> · <a class="met" href="#">Code</a></div>
             <p>Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
           </article>
           <article class="item">
             <h3>Sit Amet Consectetur</h3>
-            <div class="meta">Author — arXiv, 2025 · <a href="#">arXiv</a></div>
+            <div class="meta">Author — arXiv, 2025 · <a class="met" href="#">arXiv</a></div>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
           </article>
         </div>
@@ -102,31 +117,41 @@
     </div>
   </section>
 
+  <!-- Ornament Separator -->
+  <div class="orn-sep" aria-hidden="true">
+    <svg class="orn"><use href="#orn-fleur"></use></svg>
+  </div>
+
   <!-- Professional Experience -->
   <section id="experience">
     <div class="wrap">
-      <h2>Professional Experience <span class="rule" aria-hidden="true"></span></h2>
-      <div class="card timeline">
+      <h2 class="gilded silver">Professional Experience <span class="rule" aria-hidden="true"></span></h2>
+      <div class="card timeline cornered">
         <div class="list">
           <div class="item exp">
             <h3>Donec Ullamcorper — Company</h3>
             <div class="meta">City · 2024—Present</div>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula.</p>
           </div>
           <div class="item exp">
             <h3>Porta Amet — Organization</h3>
             <div class="meta">City · 2023—2024</div>
-            <p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Ornament Separator -->
+  <div class="orn-sep" aria-hidden="true">
+    <svg class="orn"><use href="#orn-fleur"></use></svg>
+  </div>
+
   <!-- Contact -->
   <section id="contact">
     <div class="wrap">
-      <h2>Contact <span class="rule" aria-hidden="true"></span></h2>
+      <h2 class="gilded">Contact <span class="rule" aria-hidden="true"></span></h2>
       <div class="contact-grid" role="list">
         <a role="listitem" href="mailto:lorem@ipsum.com" aria-label="Email">
           <strong>Email</strong><br>lorem@ipsum.com
@@ -148,6 +173,22 @@
     © <span id="year"></span> Your Name · Belle-Époque inspired.
   </footer>
 
+  <!-- Ornaments (inline SVG symbols) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <!-- Fleur-de-lis style divider -->
+      <symbol id="orn-fleur" viewBox="0 0 120 40">
+        <path d="M10 20 H45" stroke="currentColor" fill="none"/>
+        <path d="M75 20 H110" stroke="currentColor" fill="none"/>
+        <path d="M60 7
+                 c-6 0-11 5-11 11c0 6 5 11 11 11
+                 c6 0 11-5 11-11c0-6-5-11-11-11z" stroke="currentColor" fill="none"/>
+        <path d="M60 4 l-4 6 h8 z" fill="currentColor"/>
+        <path d="M60 36 l-4 -6 h8 z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <script>
     // Set year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -158,7 +199,7 @@
     const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     root.setAttribute('data-theme', stored || (systemPrefersDark ? 'dark' : 'light'));
 
-    // Toggle
+    // Toggle behavior & icon
     const btn = document.getElementById('themeToggle');
     const setIcon = () => btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌞' : '🌙';
     setIcon();
