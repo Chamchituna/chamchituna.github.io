@@ -5,7 +5,7 @@
   --ink-muted:#5a5a5a;
   --blue:  #0B3C5D;          /* prussian blue */
   --burg:  #6E2233;          /* deep burgundy */
-  --gold:  #B08D57;          /* antique gold (flat) */
+  --gold:  #B08D57;          /* antique gold */
   --silver:#B7C3CC;          /* cool silver */
   --card:  #FBF8F2;          /* slightly lighter than paper */
   --hairline: rgba(0,0,0,.10);
@@ -13,12 +13,12 @@
   --radius: 14px;
   --maxw:  980px;
 
-  /* Metallic gradient ramps (light mode) */
-  --gold-grad: linear-gradient(90deg,#E8D9B0,#C9A86A,#A07B3C,#C9A86A,#E8D9B0);
-  --silver-grad: linear-gradient(90deg,#F2F4F6,#DCE4EA,#B7C3CC,#DCE4EA,#F2F4F6);
+  /* Ornaments: gold by day */
+  --orn-color: var(--gold);
+  --orn-grad: linear-gradient(90deg,#E8D9B0,#C9A86A,#A07B3C,#C9A86A,#E8D9B0);
 }
 
-/* Dark theme tokens */
+/* Dark theme tokens (night) */
 :root[data-theme="dark"]{
   --paper: #171517;          /* inky aubergine/charcoal */
   --ink:   #EAE6DF;
@@ -31,9 +31,9 @@
   --hairline: rgba(255,255,255,.12);
   --shadow: 0 8px 26px rgba(0,0,0,.45);
 
-  /* Metallic gradient ramps (dark mode) */
-  --gold-grad: linear-gradient(90deg,#F1E4C1,#D6BF95,#9E8355,#D6BF95,#F1E4C1);
-  --silver-grad: linear-gradient(90deg,#F7FAFC,#E3ECF2,#C7D2DA,#E3ECF2,#F7FAFC);
+  /* Ornaments: silver by night */
+  --orn-color: var(--silver);
+  --orn-grad: linear-gradient(90deg,#F7FAFC,#E3ECF2,#C7D2DA,#E3ECF2,#F7FAFC);
 }
 
 /* ========== Base ========== */
@@ -55,7 +55,7 @@ h1, h2, h3 {
 h1 { font-size: clamp(36px, 4.5vw, 56px); color: var(--burg); letter-spacing: .2px; }
 h2 { font-size: clamp(24px, 2.2vw, 30px); position: relative; }
 h2 .rule {
-  display:inline-block; height: 1px; width: 44px; background: linear-gradient(90deg,var(--gold),transparent);
+  display:inline-block; height: 1px; width: 44px; background: linear-gradient(90deg,var(--orn-color),transparent);
   margin-left:.6rem; transform: translateY(-.4rem);
 }
 p { margin: 0 0 1rem; color: var(--ink); }
@@ -74,7 +74,6 @@ a:hover { border-bottom-color: var(--blue); }
   display:flex; align-items:center; justify-content:space-between;
   max-width: var(--maxw); margin: 0 auto; padding: 12px 20px;
 }
-.brand { font-family: "Crimson Text", Georgia, serif; font-size: 22px; color: var(--burg); }
 .menu { display:flex; gap: 18px; flex-wrap: wrap; }
 .menu a { font-weight:600; color: var(--blue); border: none; padding: 6px 10px; border-radius: 8px; }
 .menu a:hover { background: color-mix(in oklab, var(--blue) 12%, transparent); }
@@ -85,7 +84,7 @@ a:hover { border-bottom-color: var(--blue); }
 }
 .toggle:hover{ background: color-mix(in oklab, var(--blue) 10%, transparent); }
 
-/* ========== Hero ========== */
+/* ========== Hero (amped, still elegant) ========== */
 .hero {
   padding: 80px 0 60px;
   background:
@@ -105,8 +104,7 @@ a:hover { border-bottom-color: var(--blue); }
   background: linear-gradient(180deg, #fff2, #0000);
 }
 
-/* Optional: a variant class you can toggle on/off from HTML
-   (already added as .hero-pop in index.html) for a bolder look */
+/* Even bolder variant (used via .hero-pop on the header) */
 .hero-pop {
   background:
     radial-gradient(1600px 520px at 50% -25%, color-mix(in oklab, var(--blue) 14%, transparent), transparent 75%),
@@ -114,7 +112,7 @@ a:hover { border-bottom-color: var(--blue); }
     radial-gradient(1050px 320px at 92% 6%, color-mix(in oklab, var(--blue) 36%, transparent), transparent 58%);
 }
 
-/* ========== Sections ========== */
+/* ========== Sections & Cards ========== */
 section { padding: 56px 0; }
 .card {
   background: var(--card);
@@ -144,19 +142,21 @@ section { padding: 56px 0; }
 .meta { font-size: 14px; color: var(--ink-muted); margin-bottom: .4rem; }
 .tags { display:flex; flex-wrap:wrap; gap: 8px; margin-top: .5rem; }
 .tag {
-  font-size: 12px; border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent); color: var(--blue);
+  font-size: 12px; border: 1px solid color-mix(in oklab, var(--orn-color) 55%, transparent); color: var(--blue);
   padding: 2px 8px; border-radius: 999px; background: linear-gradient(180deg, #fff1, #fff0);
 }
 
 /* Experience timeline accent */
 .timeline { position: relative; }
 .timeline::before {
-  content:""; position:absolute; left: 10px; top: 6px; bottom: 6px; width:2px; background: linear-gradient(var(--gold), transparent);
+  content:""; position:absolute; left: 10px; top: 6px; bottom: 6px; width:2px; background: linear-gradient(var(--orn-color), transparent);
 }
 .exp { position: relative; padding-left: 28px; }
 .exp::before{
   content:""; position:absolute; left: 4px; top: 10px; width: 12px; height:12px; border-radius: 50%;
-  background: var(--burg); box-shadow: 0 0 0 3px color-mix(in oklab, var(--paper) 100%, transparent);
+  background: radial-gradient(circle at 30% 30%, #fff8, #0000 60%), var(--orn-grad);
+  border: 1px solid color-mix(in oklab, var(--orn-color) 45%, #0000);
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
 }
 
 /* Contact */
@@ -167,20 +167,9 @@ section { padding: 56px 0; }
 /* Footer */
 footer { padding: 40px 0 60px; color: var(--ink-muted); text-align:center; font-size: 14px; }
 
-/* Responsive */
-@media (max-width: 680px){
-  .profile { grid-template-columns: 1fr; }
-  .portrait { width: 120px; height: 120px; }
-  .timeline::before{ left: 6px; }
-  .exp { padding-left: 24px; }
-  .exp::before{ left: 0; }
-}
+/* ========== Tasteful Ornaments (auto gold/silver) ========== */
 
-/* ===================================================== */
-/* === Tasteful Belle-Époque decorations (NEW)        ===*/
-/* ===================================================== */
-
-/* 1) Gilded headings: add class .gilded to any <h2> */
+/* Gilded headings */
 h2.gilded{
   padding-bottom: .6rem;
   margin-bottom: 1.1rem;
@@ -192,80 +181,64 @@ h2.gilded::after{
   display:block;
   height: 2px;
   margin-top: .5rem;
-  background: var(--gold-grad);
+  background: var(--orn-grad);
   border-radius: 2px;
   mask: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
 }
 
-/* optional silver accent underneath (use .gilded.silver) */
-h2.gilded.silver::after{ background: var(--silver-grad); }
-
-/* 2) Section separators: .orn-sep element with inline SVG <use> */
-.orn-sep{
-  display:flex; align-items:center; justify-content:center;
-  margin: 36px auto 6px;
-}
-.orn{
-  width: 46px; height: 18px;
-  fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.2;
-  stroke: color-mix(in oklab, var(--gold) 70%, var(--silver) 30%);
-  filter: drop-shadow(0 1px 0 rgba(0,0,0,.1));
-}
-
-/* 3) Corner flourishes for feature cards: add .cornered to .card */
+/* Corner flourishes for highlighted cards */
 .card.cornered{
   position: relative;
-  border: 1px solid color-mix(in oklab, var(--gold) 40%, var(--hairline) 60%);
+  border: 1px solid color-mix(in oklab, var(--orn-color) 40%, var(--hairline) 60%);
 }
 .card.cornered::before,
 .card.cornered::after{
   content:""; position:absolute; width: 22px; height: 22px;
-  background: conic-gradient(from 0deg, transparent 0 25%, var(--gold) 25% 26%, transparent 26% 50%, var(--silver) 50% 51%, transparent 51% 75%, var(--gold) 75% 76%, transparent 76% 100%);
+  background: conic-gradient(from 0deg,
+    transparent 0 25%,
+    var(--orn-color) 25% 26%,
+    transparent 26% 50%,
+    var(--orn-color) 50% 51%,
+    transparent 51% 75%,
+    var(--orn-color) 75% 76%,
+    transparent 76% 100%);
   opacity:.55;
 }
 .card.cornered::before{ top: -1px; left: -1px; mask: radial-gradient(circle at 22px 22px, #000 18px, transparent 18px); }
 .card.cornered::after { bottom: -1px; right: -1px; transform: rotate(180deg); mask: radial-gradient(circle at 0 0, #000 18px, transparent 18px); }
 
-/* 4) Drop cap: apply .dropcap to a <p> to get a subtle initial */
+/* Drop cap follows orn color */
 .dropcap::first-letter{
   font-family: "Crimson Text", Georgia, serif;
   font-size: 3.1em;
   line-height: 0.9;
   float:left;
   margin: .06em .15em 0 0;
-  color: color-mix(in oklab, var(--burg) 70%, var(--blue) 30%);
+  color: var(--orn-color);
   text-shadow: 0 1px 0 rgba(0,0,0,.08);
 }
 
-/* 5) Gilded bullets for .list items (small left rule) */
-.list .item{
-  position: relative;
-  background:
-    linear-gradient(180deg, color-mix(in oklab, var(--silver) 35%, transparent), transparent) left 10px top / 2px 100% no-repeat,
-    linear-gradient(180deg, #fff0, #fff0);
-  padding-left: 22px;
-}
-.list .item::before{
-  content:"";
-  position:absolute; left: 0; top: 16px; width: 12px; height: 12px; border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff8, #0000 60%),
-              var(--gold-grad);
-  border: 1px solid color-mix(in oklab, var(--gold) 45%, #0000);
-  box-shadow: 0 1px 3px rgba(0,0,0,.15);
-}
-
-/* 6) Buttons/links with metallic underline on hover */
+/* Metallic underline on special links */
 a.met{
   position: relative; border-bottom: none;
 }
 a.met::after{
   content:""; position:absolute; left:0; right:0; bottom:-2px; height: 1.5px;
-  background: var(--silver-grad); transform: scaleX(0); transform-origin: left;
+  background: var(--orn-grad); transform: scaleX(0); transform-origin: left;
   transition: transform .25s ease;
 }
 a.met:hover::after{ transform: scaleX(1); }
 
-/* 7) Reduced motion */
+/* Accessibility: reduced motion */
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; }
+}
+
+/* Responsive */
+@media (max-width: 680px){
+  .profile { grid-template-columns: 1fr; }
+  .portrait { width: 120px; height: 120px; }
+  .timeline::before{ left: 6px; }
+  .exp { padding-left: 24px; }
+  .exp::before{ left: 0; }
 }
