@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Homepage</title>
+  <title>Homepage</title>
 
   <!-- Optional web fonts (safe to remove if you prefer system fonts) -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Nav -->
+  <!-- Top Nav (brand removed) -->
   <div class="nav">
-    <div class="nav-inner">
-      <div class="brand">Your&nbsp;Name</div>
-      <nav class="menu" aria-label="Primary">
+    <div class="nav-inner" style="gap:12px">
+      <nav class="menu" aria-label="Primary" style="margin-right:auto">
         <a href="#hero">Home</a>
         <a href="#profile">Profile</a>
         <a href="#research">Research</a>
@@ -26,8 +25,8 @@
     </div>
   </div>
 
-  <!-- Hero -->
-  <header id="hero" class="hero">
+  <!-- Hero (keep effects) -->
+  <header id="hero" class="hero hero-pop">
     <div class="wrap">
       <span class="kicker">Lorem · Ipsum · Dolor</span>
       <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
@@ -36,7 +35,6 @@
       </div>
     </div>
   </header>
-
 
   <!-- Profile -->
   <section id="profile">
@@ -82,7 +80,6 @@
     </div>
   </section>
 
-
   <!-- Publications -->
   <section id="pubs">
     <div class="wrap">
@@ -104,8 +101,6 @@
     </div>
   </section>
 
-
-
   <!-- Professional Experience -->
   <section id="experience">
     <div class="wrap">
@@ -126,11 +121,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Ornament Separator -->
-  <div class="orn-sep" aria-hidden="true">
-    <svg class="orn"><use href="#orn-fleur"></use></svg>
-  </div>
 
   <!-- Contact -->
   <section id="contact">
@@ -154,24 +144,8 @@
   </section>
 
   <footer>
-    © <span id="year"></span> Your Name · Belle-Époque inspired.
+    © <span id="year"></span> Homepage · Belle-Époque inspired.
   </footer>
-
-  <!-- Ornaments (inline SVG symbols) -->
-  <svg width="0" height="0" style="position:absolute">
-    <defs>
-      <!-- Fleur-de-lis style divider -->
-      <symbol id="orn-fleur" viewBox="0 0 120 40">
-        <path d="M10 20 H45" stroke="currentColor" fill="none"/>
-        <path d="M75 20 H110" stroke="currentColor" fill="none"/>
-        <path d="M60 7
-                 c-6 0-11 5-11 11c0 6 5 11 11 11
-                 c6 0 11-5 11-11c0-6-5-11-11-11z" stroke="currentColor" fill="none"/>
-        <path d="M60 4 l-4 6 h8 z" fill="currentColor"/>
-        <path d="M60 36 l-4 -6 h8 z" fill="currentColor"/>
-      </symbol>
-    </defs>
-  </svg>
 
   <script>
     // Set year
