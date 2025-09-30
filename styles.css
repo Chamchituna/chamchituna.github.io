@@ -89,8 +89,12 @@ a:hover { border-bottom-color: var(--blue); }
 .hero {
   padding: 80px 0 60px;
   background:
-    radial-gradient(1000px 300px at 10% 0%, color-mix(in oklab, var(--burg) 18%, transparent), transparent 60%),
-    radial-gradient(800px 220px at 90% 10%, color-mix(in oklab, var(--blue) 20%, transparent), transparent 60%);
+    /* subtle vignette so content pops */
+    radial-gradient(1400px 500px at 50% -20%, color-mix(in oklab, var(--blue) 10%, transparent), transparent 70%),
+    /* stronger burgundy wash */
+    radial-gradient(1200px 360px at 12% 0%, color-mix(in oklab, var(--burg) 28%, transparent), transparent 62%),
+    /* stronger blue wash */
+    radial-gradient(1000px 300px at 88% 8%, color-mix(in oklab, var(--blue) 30%, transparent), transparent 60%);
   border-bottom: 1px solid var(--hairline);
 }
 .hero .lead { max-width: 860px; }
@@ -99,6 +103,15 @@ a:hover { border-bottom-color: var(--blue); }
   font-size: 12px; color: var(--ink-muted);
   border: 1px solid var(--hairline); padding: 6px 10px; border-radius: 999px; margin-bottom: 16px;
   background: linear-gradient(180deg, #fff2, #0000);
+}
+
+/* Optional: a variant class you can toggle on/off from HTML
+   (already added as .hero-pop in index.html) for a bolder look */
+.hero-pop {
+  background:
+    radial-gradient(1600px 520px at 50% -25%, color-mix(in oklab, var(--blue) 14%, transparent), transparent 75%),
+    radial-gradient(1300px 380px at 10% -2%, color-mix(in oklab, var(--burg) 34%, transparent), transparent 62%),
+    radial-gradient(1050px 320px at 92% 6%, color-mix(in oklab, var(--blue) 36%, transparent), transparent 58%);
 }
 
 /* ========== Sections ========== */
