@@ -291,3 +291,11 @@ a.met:hover::after{ transform: scaleX(1); }
   .exp { padding-left: 24px; }
   .exp::before{ left: 0; }
 }
+
+
+.timeline .exp {
+  padding-left: 16px !important; /* same as Publications */
+}
+.timeline::before {
+  left: 0.5rem; /* nudge line closer to text, adjust until it looks right */
+}
