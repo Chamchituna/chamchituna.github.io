@@ -198,11 +198,7 @@ section { padding: 56px 0; }
 }
 /* Background */
 
-#awards-education h3 {
-  color: var(--burg);
-}
 
-#awards-education ul li strong,
 #awards-education .item.edu h4 {
   color: var(--burg);
 }
