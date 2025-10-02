@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Homepage</title>
 
-  <!-- Optional web fonts (safe to remove if you prefer system fonts) -->
+  <!-- Optional web fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Nav (brand removed) -->
+  <!-- Top Nav -->
   <div class="nav">
     <div class="nav-inner" style="gap:12px">
       <nav class="menu" aria-label="Primary" style="margin-right:auto">
@@ -65,7 +65,7 @@
       <article class="item research-card">
         <div>
           <h3>Design of a Versatile Humanoid Robot for Sports Applications</h3>
-          <div class="meta">Cras mattis · Nullam id dolor</div>
+          <div class="meta">Control · Robotics</div>
           <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
         </div>
         <div class="research-img">
@@ -76,18 +76,18 @@
       <article class="item research-card">
         <div>
           <h3>Application of Evolutionary Algorithms in Robotic Control Systems</h3>
-          <div class="meta">Mollis · Fusce dapibus</div>
+          <div class="meta">Computation · Robotics</div>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.</p>
         </div>
         <div class="research-img">
-          <img src="ChatGPT Image Sep 30, 2025 at 09_16_25 PM.png" alt="Image">
+          <img src="evo.png" alt="Image">
         </div>
       </article>
 
       <article class="item research-card">
         <div>
           <h3>Light Scattering Simulations on Various Materials and Surface Structures</h3>
-          <div class="meta">Tellus · Fermentum</div>
+          <div class="meta">Optics · Semiconductors</div>
           <p>Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.</p>
         </div>
         <div class="research-img">
@@ -172,13 +172,13 @@
     // Set year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Theme: respect system preference on first load
+    // Theme
     const root = document.documentElement;
     const stored = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     root.setAttribute('data-theme', stored || (systemPrefersDark ? 'dark' : 'light'));
 
-    // Toggle behavior & icon
+    // Toggle/icon
     const btn = document.getElementById('themeToggle');
     const setIcon = () => btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌞' : '🌙';
     setIcon();
