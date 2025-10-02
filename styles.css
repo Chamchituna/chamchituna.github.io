@@ -194,11 +194,19 @@ section { padding: 56px 0; }
 }
 .exp { position: relative; padding-left: 28px; }
 .exp::before{
-  content:""; position:absolute; left: 4px; top: 10px; width: 12px; height:12px; border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff8, #0000 60%), var(--orn-grad);
-  border: 1px solid color-mix(in oklab, var(--orn-color) 45%, #0000);
-  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  display: none;
 }
+/* Background */
+
+#awards-education h3 {
+  color: var(--burg);
+}
+
+#awards-education ul li strong,
+#awards-education .item.edu h4 {
+  color: var(--burg);
+}
+
 
 /* Contact */
 .contact-grid { display:grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
