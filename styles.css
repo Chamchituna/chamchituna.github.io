@@ -288,15 +288,20 @@ a.met:hover::after{ transform: scaleX(1); }
   .exp::before{ left: 0; }
 }
 
-
-.timeline .exp {
-  padding-left: 16px !important; /* same as Publications */
-
-#awards-education ul li strong {
-  color: var(--ink) !important;
+/* Background */
+#awards-education h3 {
+  color: var(--burg);
 }
 
+/* === Experience === */
+.timeline .exp {
+  padding-left: 16px !important; /* match Publications' left padding */
 }
 .timeline::before {
-  left: 0.5rem; /* nudge line closer to text, adjust until it looks right */
+  left: 0.5rem; /* bring the line closer so the section visually aligns */
+}
+
+/* Awards: keep titles in default ink */
+#awards-education ul li strong {
+  color: var(--ink);
 }
